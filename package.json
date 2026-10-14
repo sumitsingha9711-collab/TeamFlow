@@ -1,0 +1,25 @@
+{
+  "name": "teamflow",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev -w client\" \"npm run dev -w server\"",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "npm run test -w server && npm run test -w client",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^17.13.0",
+    "prettier": "^3.9.10"
+  }
+}

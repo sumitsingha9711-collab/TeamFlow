@@ -1,0 +1,6 @@
+node_modules/
+client/dist/
+coverage/
+graphify-out/
+.codex/
+package-lock.json
